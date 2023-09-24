@@ -6,16 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="">
+    <form onsubmit="return validate()" action="submit.html">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br><br>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"><br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
+        <input type="password" id="pass" name="password"><br><br>
         <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password"><br><br>
-        <input type="submit" value="Submit">
+        <input type="password" id="c_pass" name="confirm_password"><br><br>
+        <button type="submit">Submit</button>
       </form>
+      <script>
+        function validate(){
+            var name=document.getElementById('name').value
+            var email=document.getElementById('email').value
+            var password=document.getElementById('pass').value
+            var confirmPass=document.getElementById('c_pass').value
+            var regx1= /^[A-Za-z]+$/;
+            var regx2= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var validPass=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+            if(!name.match(regx1)){
+                alert("Name must be fill out with only letters")
+                return false;
+            }
+            else if(!email.match(regx2)){
+                alert("Invalid Email")
+                return false;
+            }
+            else if(!password.match(validPass)){
+                alert("Minimum 8 character and One Uppercase One lowercase and one digit")
+                return false;
+            }
+            else if(password!=confirmPass){
+                alert("password doesn't match with confirm Password")
+                return false;
+            }
+            else{
+                return true;
+            }
+  
+
+        }
+      </script>
 </body>
 </html>
