@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id= "img1" onmouseover="setNewImg()" onmouseout="setOldImg()" src="./img/1.jpg" alt="Italian Trulli" height="300" width="450"/>
+
+    <script>
+        function setNewImg(){
+            
+            document.getElementById("img1").src=`./img/4.jpg`
+        }
+        function setOldImg(){
+            document.getElementById("img1").src=`./img/1.jpg`
+        }
+    </script>
+</body>
+</html>
