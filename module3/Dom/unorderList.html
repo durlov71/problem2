@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+    
+        <label for="value">
+            Add Element Value
+        </label>
+    
+        <input type="text" id="value" />
+        <br /><br />
+        <button type="button" onClick="addItem()">
+            Add
+        </button>
+    </form>
+    
+    <ul id="parent">
+        
+    </ul>
+    
+    <script>
+        function addItem() {
+    
+            let value = document.getElementById("value").value;
+        
+            type = document.createElement('li');
+
+            type.appendChild(document.createTextNode(value));
+    
+            document.getElementById("parent").appendChild(type);
+
+            document.getElementById("value").value=""    // for clear the input field
+        }
+    </script>
+    
+</body>
+</html>

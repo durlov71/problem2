@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .highlight{
+                background-color: yellowgreen;
+            }
+    </style>
+</head>
+<body>
+    <button onclick="changeBg()">Change BG color</button>
+    <p id="bgcolor">
+        It was a bitter fight for supremacy in Asia. Japan had provoked the US in the Pacific War. 
+        The Second World War now spanned the entire globe. 
+        The two naval nations competed against each other on the world’s largest ocean and fought battles on an unprecedented scale.
+        In the attack on Pearl Harbor in December 1941, 
+        Japanese bombers destroyed most of the American Pacific fleet within hours and killed 2,500 U.S. soldiers. 
+        The surprise military strike was intended to help secure Japan's supremacy in the Eastern Pacific. 
+        The Pacific War began, which only ended after the atomic bombs were dropped on Hiroshima and Nagasaki in the summer of 1945. 
+        The WELT documentary reconstructs its course using mostly color original footage.
+</p>
+
+<script>
+    
+    function changeBg(){
+        document.getElementById("bgcolor").classList.add("highlight")
+    }
+</script>
+</body>
+</html>

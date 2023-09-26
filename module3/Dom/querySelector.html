@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeColor()">change Text color</button>
+    <p class="myclass" id="id-1">This is paragraph tag 1.</p>
+    <p class="myclass" id="id-1">This is paragraph tag 2</p>
+    <p class="myclass" id="id-1">This is paragraph tag 3</p>
+    <p class="myclass" id="id-1">This is paragraph tag 4</p>
+    <p class="myclass" id="id-1">This is paragraph tag 5</p>
+
+    <script>
+        function changeColor(){
+           var text= document.querySelectorAll('.myclass')
+           for(i=0;i<text.length;i++){
+            text[i].style.color="red"
+           }
+        }
+    </script>
+</body>
+</html>
