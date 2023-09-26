@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Name</label>
+    <input type="text" id="name" name="name">
+    <label>Email</label>
+    <input type="email" id="email" name="email">
+    <button onclick="postRequest()">Ajax POST Request</button>
+    <script>
+        function postRequest(){
+            var name= document.getElementById('name').value
+            var email=document.getElementById('email').value
+
+            var data={
+                name,
+                email
+            }
+
+            var URL="https://api.example.com/submit"
+            var Config={
+                method:"POST",
+                headers:{'Accept':'application\json','Content-Type':'application\json'},
+                body:JSON.stringify(data)
+            }
+            fetch(URL,Config)
+            .then(response=>response.json())
+            .then(result=>console.log(result))
+            .catch(err=>console.log(err))
+
+
+        }
+
+    </script>
+</body>
+</html>
